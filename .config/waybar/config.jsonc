@@ -1,0 +1,91 @@
+{
+  "output": "LVDS-1",
+  "layer": "top",
+  "position": "top",
+  "mod": "dock",
+  "exclusive": true,
+  "passthrough": false,
+  "gtk-layer-shell": true,
+  "modules-left": ["hyprland/workspaces"],
+  "modules-center": ["clock"],
+  "modules-right": ["backlight","battery","wireplumber", "network", "bluetooth"],
+
+  "hyprland/workspaces": {
+    "disable-scroll": true,
+    "on-click": "activate",
+    "format": "{icon}",
+   "persistent-workspaces": {
+      "*": [ 1,2,3,4,5 ]
+    },
+    "format-icons": {
+      // "active": "󰋘",
+      // "default": "󰋙"
+
+      "active": "*",
+      "default": "o"
+    }
+  },
+
+"custom/yay": {
+    "format": " {}",
+    "interval": 3600,
+    "exec": "yay -Qu | wc -l",
+    "signal": 8
+  },
+
+  "clock": {
+    "interval": 1,
+    "format": "{:%H:%M:%S}",
+    "format-alt": "{:%d.%m.%Y}"
+  },
+
+
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon} {percent}%",
+    "tooltip": false, 
+    "states": {
+      "max": 100
+    },
+    "format-icons": ["", "", "", "", "", "", "", "", "", "󰖨"]
+  },
+  "wireplumber": {
+    "format": "{icon} {volume}%",
+    "format-muted": "󰝟 {volume}%",
+    "format-icons": {
+      "default": ["", "", ""]
+    }
+  },
+  "battery": {
+    "bat": "BAT0",
+    "adapter": "ADP0",
+    "interval": 3,
+    "full-at": 95,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-warning": "󰂃 {capacity}%",
+    "format-critical": "󱉝 {capacity}%}",
+    "format-plugged": "󰂄 {capacity}%",
+    "format-charging": "󰂄 {capacity}%",
+    "format-full": "󱟢 {capacity}%",
+    "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
+  },
+
+  "network": {
+    "interval":2,
+    "format": "{ifname}",
+    "format-disconnected": "󰪎 Disconnected",
+    "format-wifi": "{icon} {essid}",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤨"],
+    "format-ethernet": "󰈀 ETH"
+  },
+
+  "bluetooth": {
+    "format-off": " off",
+    "format-on": " on",
+    "format-connected": " {num_connections}"
+  }
+}

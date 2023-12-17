@@ -1,0 +1,170 @@
+@define-color base   #1e1e2e;
+@define-color mantle #181825;
+@define-color crust  #11111b;
+
+@define-color text     #cdd6f4;
+@define-color subtext0 #a6adc8;
+@define-color subtext1 #bac2de;
+
+@define-color surface0 #313244;
+@define-color surface1 #45475a;
+@define-color surface2 #585b70;
+
+@define-color overlay0 #6c7086;
+@define-color overlay1 #7f849c;
+@define-color overlay2 #9399b2;
+
+@define-color blue      #89b4fa;
+@define-color lavender  #b4befe;
+@define-color sapphire  #74c7ec;
+@define-color sky       #89dceb;
+@define-color teal      #94e2d5;
+@define-color green     #a6e3a1;
+@define-color yellow    #f9e2af;
+@define-color peach     #fab387;
+@define-color maroon    #eba0ac;
+@define-color red       #f38ba8;
+@define-color mauve     #cba6f7;
+@define-color pink      #f5c2e7;
+@define-color flamingo  #f2cdcd;
+@define-color rosewater #f5e0dc;
+@define-color base03    rgba(30,30,46,0.3);
+
+* {
+  all: unset;
+}
+
+window#waybar {
+  font-family: "GohuFont 11 Nerd Font Mono";
+  font-size: 11px;
+  color: @text;
+  background-color: @base03;
+  border-bottom: 2px solid @surface0;
+}
+
+tooltip {
+  opacity: 0;
+}
+
+
+.modules-right > widget > label {
+  font-family: "GohuFont 11 Nerd Font Propo";
+  font-size: 11px;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 4px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  border-bottom: 2px solid;
+}
+
+#workspaces button {
+  color: @mauve;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding-left: 4px;
+  padding: 4px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  padding-right: 4px;
+  border-bottom: 2px solid @surface0;
+  /* font-size: 20px; */
+}
+
+#workspaces button.empty {
+  color: @surface0;
+}
+
+#workspaces button.active {
+  color: @mauve;
+  border-bottom: 2px solid @mauve;
+}
+
+#clock {
+  font-family: "GohuFont 11 Nerd Font Propo";
+  font-size: 11px;
+  margin-left: 8px;
+  margin-right: 8px;
+  padding: 4px;
+  padding-bottom: 0px;
+  padding-top: 0px;
+  border-bottom: 2px solid;
+}
+
+#backlight {
+  border-color: @lavender;
+  color: @lavender;
+}
+
+#backlight.max {
+  border-color: @marron;
+  color: @marron;
+}
+
+#wireplumber {
+  border-color: @green;
+  color: @green;
+}
+
+#wireplumber.muted {
+  border-color: @red;
+  color: @red;
+}
+
+#battery {
+  border-color: @yellow;
+  color: @yellow;
+}
+
+#battery.full {
+  border-color: @green;
+  color: @green;
+}
+
+#battery.charging,
+#battery.charging.warning,
+#battery.charging.critical,
+#battery.plugged{
+  border-color: @sapphire;
+  color: @sapphire;
+}
+
+#battery.warning {
+  border-color: @peach;
+  color: @peach;
+}
+
+#battery.critical {
+  border-color: @red;
+  color: @red;
+}
+
+#network.disconnected {
+  border-color: @surface2;
+  color: @surface2;
+}
+
+#network.wifi {
+  border-color: @sky;
+  color: @sky;
+}
+
+#network.ethernet {
+  border-color: @flamingo;
+  color: @flamingo;
+}
+
+#bluetooth.off {
+  color: @surface2;
+  border-color: @surface2;
+}
+
+#bluetooth.on {
+  color: @text;
+  border-color: @text;
+}
+
+#bluetooth.connected {
+  border-color: @blue;
+  color: @blue;
+}

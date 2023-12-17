@@ -1,0 +1,54 @@
+	font = "GohuFont 11 Nerd Font Mono"
+	font-size = 11
+	hint-font = true
+
+	text-color = #cdd6f4
+	prompt-color = #cdd6f4
+	placeholder-color = #a6adc8
+	input-color = #cdd6f4
+	default-result-color = #cdd6f4
+	selection-color = #cba6f7
+
+	prompt-background = #00000000
+	placeholder-background = #00000000
+	input-background = #00000000
+	default-result-background = #00000000
+	selection-background = #00000000
+	selection-match-color = #00000000
+
+	background-color = #1e1e2e4d
+	border-color = #cdd6f4
+
+
+	width = 80%
+	height = 80%
+
+	prompt-background-padding = 0
+	placeholder-background-padding = 0
+	input-background-padding = 0
+	default-result-background-padding = 0
+	selection-background-padding = 0
+
+	prompt-background-corner-radius = 0
+	placeholder-background-corner-radius = 0
+	input-background-corner-radius = 0
+	default-result-background-corner-radius = 0
+	selection-background-corner-radius = 0
+
+	outline-width = 0
+	border-width = 2
+
+	prompt-padding = 0
+	padding-top = 0
+	padding-bottom = 0
+	padding-left = 0
+	padding-right = 0
+
+	margin-top = 0
+	margin-bottom = 0
+	margin-left = 0
+	margin-right = 0
+
+	prompt-text = "run : "
+	matching-algorithm = fuzzy
+	terminal = alacritty
