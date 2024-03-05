@@ -17,13 +17,13 @@ set zoom-min 10
 
 # zathurarc-dark
 
-set font "GohuFont 11"
+set font "Iosevka Nerd Font 14"
 
 include catppuccin-mocha
 
-set recolor "true"
-set recolor-reverse-video "true"
-set recolor-keephue "true"
+# set recolor "true"
+# set recolor-reverse-video "true"
+# set recolor-keephue "true"
 
 
 set render-loading "false"

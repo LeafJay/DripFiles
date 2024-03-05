@@ -1,5 +1,5 @@
 set default-fg                "#CDD6F4"
-set default-bg 			          "rgba(24, 24, 37, 0.3)"
+set default-bg 			          "rgba(24, 24, 37, 0.7)"
 
 set completion-bg		          "#313244"
 set completion-fg		          "#CDD6F4"

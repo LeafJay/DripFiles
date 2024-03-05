@@ -1,14 +1,15 @@
 {
   "output": "LVDS-1",
-  "layer": "top",
+  "reload_style_on_change": true,
+  //"layer": "top",
   "position": "top",
   "mod": "dock",
   "exclusive": true,
   "passthrough": false,
   "gtk-layer-shell": true,
   "modules-left": ["hyprland/workspaces"],
-  "modules-center": ["clock"],
-  "modules-right": ["backlight","battery","wireplumber", "network", "bluetooth"],
+  "modules-center": ["mpris"],
+  "modules-right": ["backlight","battery","wireplumber", "network", "bluetooth","clock"],
 
   "hyprland/workspaces": {
     "disable-scroll": true,
@@ -18,42 +19,46 @@
       "*": [ 1,2,3,4,5 ]
     },
     "format-icons": {
-      // "active": "󰋘",
-      // "default": "󰋙"
-
-      "active": "*",
-      "default": "o"
+      "active": " ",
+      "default": " "
     }
   },
 
-"custom/yay": {
-    "format": " {}",
-    "interval": 3600,
-    "exec": "yay -Qu | wc -l",
-    "signal": 8
-  },
+"mpris": {
+    "interval": 1,
+	"format": "{player_icon} {dynamic}",
+	"format-paused": "{status_icon} {dynamic}",
+	"player-icons": {
+		"default": "󰏤",
+		"mpv": "🎵",
+		"spotify": "🎵"
+	},
+	"status-icons": {
+		"paused": "󰐊"
+	}
+},
 
   "clock": {
     "interval": 1,
-    "format": "{:%H:%M:%S}",
-    "format-alt": "{:%d.%m.%Y}"
+    "format": "{:%H:%M}",
+    "format-alt": "{:%d.%m}"
   },
 
 
   "backlight": {
     "device": "intel_backlight",
-    "format": "{icon} {percent}%",
+    "format": "{icon}",
     "tooltip": false, 
     "states": {
       "max": 100
     },
-    "format-icons": ["", "", "", "", "", "", "", "", "", "󰖨"]
+    "format-icons": [" ", " ", " ", " ", " ", " ", " ", " ", " ", "󰖨 "]
   },
   "wireplumber": {
-    "format": "{icon} {volume}%",
-    "format-muted": "󰝟 {volume}%",
+    "format": "{icon}",
+    "format-muted": "󰝟 ",
     "format-icons": {
-      "default": ["", "", ""]
+      "default": [" ", " ", " "]
     }
   },
   "battery": {
@@ -65,27 +70,24 @@
       "warning": 30,
       "critical": 15
     },
-    "format": "{icon} {capacity}%",
-    "format-warning": "󰂃 {capacity}%",
-    "format-critical": "󱉝 {capacity}%}",
-    "format-plugged": "󰂄 {capacity}%",
-    "format-charging": "󰂄 {capacity}%",
-    "format-full": "󱟢 {capacity}%",
+    "format": "{icon}",
+    "format-warning": "󰂃",
+    "format-critical": "󱉝",
+    "format-plugged": "󰂄",
+    "format-charging": "󰂄",
+    "format-full": "󱟢",
     "format-icons": ["󰂎", "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹"]
   },
 
   "network": {
     "interval":2,
-    "format": "{ifname}",
-    "format-disconnected": "󰪎 Disconnected",
-    "format-wifi": "{icon} {essid}",
-    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤨"],
-    "format-ethernet": "󰈀 ETH"
+    "format-disconnected": "󰪎 ",
+    "format-wifi": "{icon}",
+    "format-icons": ["󰤯 ", "󰤟 ", "󰤢 ", "󰤨 "],
+    "format-ethernet": "󰈀  "
   },
 
   "bluetooth": {
-    "format-off": " off",
-    "format-on": " on",
-    "format-connected": " {num_connections}"
+    "format": ""
   }
 }
